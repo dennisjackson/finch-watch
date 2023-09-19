@@ -42,12 +42,8 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Download Table
         uses: actions/download-artifact@v3
-        with: 
-           name: table
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
-        with:
-          path: table/table.csv
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
