@@ -1,6 +1,9 @@
 name: Regenerate Table
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 5,17 * * *'
 
 concurrency:
   group: "pages"
