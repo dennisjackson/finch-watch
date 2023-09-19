@@ -6,6 +6,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   refresh-csv:
     runs-on: ubuntu-latest
