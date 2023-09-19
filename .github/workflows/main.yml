@@ -1,0 +1,27 @@
+name: Regenerate Table
+
+on: [workflow_dispatch]
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          cache: pip
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v4  
+      - name: Run script
+        run: bash run.sh
+      - name: Upload output file
+        uses: actions/upload-artifact@v3
+        with:
+          name: table
+          path: data/table.csv
+
