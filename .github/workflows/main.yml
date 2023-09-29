@@ -3,7 +3,7 @@ name: Regenerate Table
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 5,17 * * *'
+    - cron: '30 5,12,17,23 * * *'
 
 concurrency:
   group: "pages"
